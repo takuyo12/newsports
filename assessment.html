@@ -2,18 +2,218 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assessment.css">
-    <title>あなたのいいところ診断</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボッカー公式webサイト</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* ナビゲーションバー */
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2575fc;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2575fc;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* メインセクション */
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #6a11cb;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section ul {
+            padding-left: 1.5rem;
+        }
+
+        section ul li {
+            margin-bottom: 0.5rem;
+            list-style: disc;
+        }
+
+        section p {
+            margin-bottom: 1.5rem;
+        }
+
+         /* コメントフォーム */
+         .comment-section {
+            margin-top: 2rem;
+        }
+
+        .comment-section h2 {
+            font-size: 1.8rem;
+            color: #6a11cb;
+            margin-bottom: 1rem;
+        }
+
+        .comment-form {
+            margin-bottom: 2rem;
+        }
+
+        .comment-form label {
+            font-weight: bold;
+            color: #6a11cb;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .comment-form button {
+            background-color: #2575fc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .comment-form button:hover {
+            background-color: #6a11cb;
+        }
+
+        /* コメント表示 */
+        .comments {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comment .author {
+            font-weight: bold;
+            color: #6a11cb;
+        }
+
+        .comment .message {
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>あなたのいいところは?</h1>
-    <p>診断したい名前を入れて下さい</p>
-    <input type="text" id="user-name" size="40" maxlength="20">
-    <button id="assessment">診断する</button>
-    <div id="result-area"></div>
-    <div id="tweet-area">
-    </div>
-    <script src="assessment.js"></script>
+
+    <header>
+        <h1>ボッカーとは</h1>
+        <figure>
+            <img src="3Q.png" alt="ボッチャの画像" width="1024" height="400">
+            <figcaption class="caption"> </figcaption>
+        </figure>
+    </header>
+
+    <nav>
+        <a href="#about">誰でもできるNEWスポーツ</a>
+        <a href="#examples">ルールについて</a>
+        <a href="#benefits">ボッカーで使用する道具</a>
+        <a href="#comments">コメント</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>誰でもできるNEWスポーツ</h2>
+            <p>
+                説明
+            </p>
+        </section>
+
+        <section id="examples">
+            <h2>ルールについて</h2>
+            <ul>
+                <li><strong>1</strong> - ルール</li>
+                <li><strong>2</strong> - ルール</li>
+                <li><strong>3</strong> - ルール</li>
+            </ul>
+        </section>
+
+        <section id="benefits">
+            <h2>ボッカーで使用する道具</h2>
+            <ul>
+                <li>ジャックボール</li>
+                <li>二色のガムテープ</li>
+                <li>一人一枚分の新聞紙</li>
+            </ul>
+        </section>
+
+        <section id="comments" class="comment-section">
+          <h2>コメント</h2>コメントは担当者に送られます。
+          <div class="comment-form">
+              <form id="commentForm">
+                  <label for="name">お名前：</label><br>
+                  <input type="text" id="name" name="name" required><br>
+                  <label for="comment">コメント：</label><br>
+                  <textarea id="comment" name="comment" rows="4" required></textarea><br>
+                  <button type="submit">投稿</button>
+              </form>
+          </div>
+          <div class="comments" id="commentsList">
+              <!-- コメントはここに追加されます -->
+          </div>
+      </section>
+
 </body>
 </html>
